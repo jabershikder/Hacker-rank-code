@@ -1,0 +1,74 @@
+//https://www.hackerrank.com/cse310-week5-day2-seee
+
+//Q1
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
+        
+        int mul_real = (a*c) - (b*d);
+        int mul_img = (a*d) + (b*c);
+        if(mul_img>=0){
+            System.out.print(mul_real+"+"+mul_img+"i");
+        }
+        else{
+            System.out.print(mul_real+mul_img+"i");
+        }
+        
+        
+        
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+class circle{
+    double radius;
+    double area;
+    public circle(double r){
+        radius=r;
+    }
+    double getArea(){
+        area = (radius*radius)*(3.14);
+        return area;
+    }
+    
+}
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        circle c[] = new circle[n];
+        for(int i=0;i<n;i++){
+            double r = sc.nextDouble();
+            c[i] = new circle(r);
+        }
+        for(int i=0;i<n;i++){
+            double area = c[i].getArea();
+            if(area>=30){
+                System.out.printf("%.4f",c[i].getArea());
+                
+            }
+        }
+        
+    }
+}

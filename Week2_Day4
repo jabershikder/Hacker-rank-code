@@ -1,0 +1,67 @@
+
+//Q1
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int oneW = sc.nextInt();
+        int roundT = sc.nextInt();
+        int multiC = sc.nextInt();
+        int total=0;
+        if(oneW>0 && roundT>0 && multiC>0){
+            oneW=oneW-((10*oneW)/100);
+            roundT=roundT-((20*roundT)/100);
+            multiC=multiC-((30*multiC)/100);
+            total = (2*roundT)+(1*oneW)+(3*multiC);
+            if(total<=54000){
+                System.out.println(total);
+            }
+            else{
+                System.out.println(54000);
+            }
+            
+ 
+        }
+        else{
+            System.out.println("Invalid Input");
+        }
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+       
+        String str = sc.nextLine();
+        int n = str.length();
+        char ch = str.charAt(n - 1);
+        char ch1 = str.charAt(n-2);
+        int num1 = ch1-'0';
+        int num2=ch-'0';
+        int val = (num1*10)+num2;
+        if(val>9 && val<100){
+            int sp=(num1*num2)+(num1+num2);
+            System.out.println((val==sp)? "Special two digit number" : "Not a special two digit number");
+    
+        }
+        else{
+            System.out.println("Invalid Input");
+        }
+        
+        
+        
+        
+    }
+}

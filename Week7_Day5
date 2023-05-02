@@ -1,0 +1,78 @@
+//https://www.hackerrank.com/cse310-week7-day5-seee
+
+//Q1
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        int [] charArr=new int[122];
+        for(int i=0;i<s.length();i++)
+        {
+            char c=s.charAt(i);
+            if(Character.isLetterOrDigit(c))
+            {
+                charArr[c]++;
+            }
+            else
+            {
+                System.out.println("Error");
+                return;
+            }
+        }
+        int maxFreq=0;
+        char maxOcc=' ';
+        for(int i=0;i<charArr.length;i++)
+        {
+            if(charArr[i]>maxFreq)
+            {
+                maxFreq=charArr[i];
+                maxOcc=(char)i;
+                
+            }
+        }
+        System.out.println("Maximum occurring character is: "+maxOcc);
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /*
+         * Enter your code here. Read input from STDIN. Print output to STDOUT. Your
+         * class should be named Solution.
+         */
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int num = sc.nextInt();
+        if(num>=1 && num<=10){
+            
+        
+        String str[] = s.split(" ");
+        int cnt = 0;
+        for (int i = 0; i < str.length; i++) {
+            if (str[i].length() == num) {
+                cnt++;
+            }
+        }
+
+        System.out.println(cnt);
+        }
+        else{
+            System.out.print("Invalid Input");
+        }
+    }
+}

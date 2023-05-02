@@ -1,0 +1,69 @@
+//Link: https://www.hackerrank.com/cse310-week11-day3-seee
+
+//Q1
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /*
+         * Enter your code here. Read input from STDIN. Print output to STDOUT. Your
+         * class should be named Solution.
+         */
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.next();
+        String s2 = sc.next();
+        int j = s2.length() - 1;
+        boolean match = true;
+        
+        if(s1.length()-4>=3){
+            for (int i = 0; i < 3 && i < s1.length(); i++) {
+            
+            if (s1.charAt(i) != s2.charAt(j)) {
+                match = false;
+                break;
+            }
+            j--;
+        }
+        System.out.print((match) ? "GREAT" : "TRY NEXT TIME");
+        }
+        else{
+            System.out.print("ERROR");
+        }
+        
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.next();
+        String s2 = sc.next();
+        char c1[] =s1.toCharArray();
+        char c2[] = s2.toCharArray();
+        Arrays.sort(c1);
+        Arrays.sort(c2);
+        boolean anagram = true;
+        if(c1.length==c2.length && c1.length>2){
+            for(int i=0;i<c1.length;i++){
+                if(c1[i]!=c2[i]){
+                    anagram = false;
+                    break;
+                }
+            }
+            System.out.print((anagram)? "ANAGRAM":"NOT ANAGRAM");
+        }
+        else{
+            System.out.print("Invalid Input");
+        }
+    }
+}

@@ -1,0 +1,58 @@
+//Link: https://www.hackerrank.com/cse310-week11-day4-seee
+
+//Q1
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.next();
+        String s2 = sc.next();
+        Stack<Character> st1 = new Stack<Character>();
+        for(int i=0;i<2;i++){
+            st1.push(s1.charAt(i));
+        }
+        for(int i=0;i<s2.length();i++){
+            st1.push(s2.charAt(i));
+        }
+        for(int i=2;i<s1.length();i++){
+            st1.push(s1.charAt(i));
+        }
+        for(char ch: st1){
+            System.out.print(ch);
+        }
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n= sc.nextInt();
+        String str[] = new String[n];
+        for(int i=0;i<n;i++){
+            str[i]=sc.next();
+        }
+        int cntInt=0;
+        int cntStr=0;
+        for(int i=0;i<n;i++){
+            if(str[i].charAt(0)=='0' || str[i].charAt(0)=='1' || str[i].charAt(0)=='2' || str[i].charAt(0)=='3' || str[i].charAt(0)=='4' || str[i].charAt(0)=='5' || str[i].charAt(0)=='6' || str[i].charAt(0)=='7' || str[i].charAt(0)=='8' || str[i].charAt(0)=='9'){
+                cntInt++;
+            }
+            else{
+                cntStr++;
+            }
+        }
+        System.out.print(cntInt+"\n"+cntStr);
+    }
+}

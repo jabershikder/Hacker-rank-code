@@ -1,0 +1,71 @@
+//https://www.hackerrank.com/cse310-week6-day3-seee
+
+//Q1
+
+import java.io.*;
+import java.util.*;
+
+class student {
+    String n1, n2;
+
+    void display_n1() {
+        System.out.println(n1);
+    }
+
+    void display_n2() {
+        System.out.println(n2);
+    }
+
+}
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /*
+         * Enter your code here. Read input from STDIN. Print output to STDOUT. Your
+         * class should be named Solution.
+         */
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.next();
+        String s2 = sc.next();
+        student st = new student();
+        if (s1.charAt(0) >= 'A' && s1.charAt(0) <= 'z') {
+            st.n1 = s1;
+            st.display_n1();
+        } else {
+            System.out.print("Unknown");
+        }
+        if (s2.charAt(0) >= 'A' && s2.charAt(0) <= 'z') {
+            st.n2 = s2;
+            st.display_n2();
+        } else {
+            System.out.print("Unknown");
+        }
+
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /*
+         * Enter your code here. Read input from STDIN. Print output to STDOUT. Your
+         * class should be named Solution.
+         */
+        Scanner sc = new Scanner(System.in);
+        int length[] = new int[10];
+        for (int i = 0; i < 10; i++) {
+            length[i] = sc.nextInt();
+        }
+        Arrays.sort(length);
+        
+        for (int i : length) {
+            System.out.print(i + " ");
+        }
+    }
+}

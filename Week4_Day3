@@ -1,0 +1,72 @@
+//https://www.hackerrank.com/cse310-week4-day3-seee
+//Q1
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(n>0  && n<20){
+            int arr[]= new int[n];
+            boolean neg = false;
+            for(int i=0;i<n;i++){
+                arr[i] = sc.nextInt();
+                if(arr[i]<1){
+                    neg = true;
+                    break;
+                }
+            }
+            if(neg == false){
+                Arrays.sort(arr);
+                if(n==1 || n==2){
+                    System.out.print(arr[0]);
+                }
+                else{
+                    System.out.print(arr[n-2]);
+                }
+                  
+            }
+            else{
+                System.out.print("Invalid Array Elements");
+            }
+            
+        }
+        else{
+            System.out.print("Invalid Array Size");
+        }
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int arr2[] = new int[n];
+        for(int i=0;i<n;i++){
+            arr2[i] = arr[i];
+        }
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+        for(int i=0;i<n;i++){
+            System.out.print(arr2[i]+" ");
+        }
+    }
+}

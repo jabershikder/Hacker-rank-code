@@ -1,0 +1,79 @@
+//https://www.hackerrank.com/contests/cse310-week6-day2-seee/challenges
+
+//Q1
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void calc_sum(int arr[], int num){
+        int sum =0;
+        for(int i=0;i<num;i++){
+            sum = sum+arr[i];
+        }
+        System.out.print(sum);
+        
+    }
+    public static void calc_mul(int arr[], int num){
+        int mul=1;
+        for(int i=0;i<num;i++){
+            mul = mul*arr[i];
+        }
+        System.out.print(mul);
+        
+    }
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner (System.in);
+        int num = sc.nextInt();
+        int n;
+        int arr[] = new int[num];
+        for(int i=0;i<num;i++){
+            arr[i]=sc.nextInt();
+        }
+        n = sc.nextInt();
+        
+        if(n==1){
+            calc_sum(arr,num);
+        }
+        else if(n==2){
+            calc_mul(arr,num);
+        }
+        else{
+            System.out.print("Wrong Choice");
+        }
+
+        
+        
+        
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if(num>20 && num <400){
+            if(num%2 == 0 && num%3==0){
+                System.out.print("True");
+            }
+            else{
+                System.out.print("False");
+            }
+        }
+        else{
+            System.out.print("Invalid Input");
+        }
+    }
+}

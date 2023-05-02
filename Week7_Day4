@@ -1,0 +1,88 @@
+//https://www.hackerrank.com/contests/cse310-week7-day4-seee/challenges
+//Q1
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    static boolean isPalindrome(String str,
+            int low, int high) {
+        while (low < high) {
+            if (str.charAt(low) != str.charAt(high))
+                return false;
+            low++;
+            high--;
+        }
+        return true;
+    }
+
+    static int palinRmvOneChar(String str) {
+
+        int low = 0, high = str.length() - 1;
+
+        while (low < high) {
+            if (str.charAt(low) == str.charAt(high)) {
+                low++;
+                high--;
+            } else {
+
+                if (isPalindrome(str, low + 1, high))
+                    return low;
+
+                if (isPalindrome(str, low, high - 1))
+                    return high;
+                return -1;
+            }
+        }
+
+        return 1;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        int ind = palinRmvOneChar(str);
+        System.out.println((ind > 0) ? "true" : "false");
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /*
+         * Enter your code here. Read input from STDIN. Print output to STDOUT. Your
+         * class should be named Solution.
+         */
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        if((s.indexOf('0')>0 || s.indexOf('1')>0 ||s.indexOf('2')>0 ||s.indexOf('3')>0 ||s.indexOf('4')>0 ||s.indexOf('5')>0 ||s.indexOf('6')>0 ||s.indexOf('7')>0 ||s.indexOf('8')>0 ||s.indexOf('9')>0) || s.length()==0 ){
+            System.out.println("Invalid input");
+        }
+        else{
+            
+        s=s.toLowerCase();
+        StringBuilder str = new StringBuilder();
+        int st = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == ' ') {
+                str.append(s.substring(st, i));
+                System.out.print(str.reverse() + " ");
+                str.delete(0, str.length());
+                st = i + 1;
+            }
+            if (i == s.length() - 1) {
+                str.append(s.substring(st, s.length()));
+                System.out.println(str.reverse());
+
+            }
+        
+
+        }
+        }
+    }
+}

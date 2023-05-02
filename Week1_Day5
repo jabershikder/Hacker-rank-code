@@ -1,0 +1,73 @@
+
+//Q1
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int total=0;
+        if(a>0 && a<=100 && b>0 && b<=100){
+            for(int i=1;i<=a;i++){
+                total = total + 4;
+            }
+            for(int i=1;i<=b;i++){
+                total = total + 6;
+            }
+            System.out.println(total);
+        }
+        else{
+            System.out.println(total);
+            
+        }
+        
+  
+        
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        /*
+         * Enter your code here. Read input from STDIN. Print output to STDOUT. Your
+         * class should be named Solution.
+         */
+        Scanner sc = new Scanner(System.in);
+        int balance = 20000;
+        long ac = sc.nextLong();
+        sc.nextLine();
+        String name = sc.nextLine();
+        char g = sc.next().charAt(0);
+        int amount = sc.nextInt();
+        if (amount <= balance) {
+            balance = balance - amount;
+            if (g == 'M') {
+                System.out.println("Hi Mr. " + name + "!");
+                System.out.println("Your Account Balance after withdrawl is " + balance + ".");
+            }
+            if (g == 'F') {
+                System.out.println("Hi Ms. " + name + "!");
+                System.out.println("Your Account Balance after withdrawl is " + balance + ".");
+            }
+        } else {
+            if (g == 'M') {
+                System.out.println("Hi Mr. " + name + "!");
+                System.out.println("Insufficient Funds! You can not withdraw " + amount + ".");
+            }
+            if (g == 'F') {
+                System.out.println("Hi Ms. " + name + "!");
+                System.out.println("Insufficient Funds! You can not withdraw " + amount + ".");
+            }
+        }
+    }
+}

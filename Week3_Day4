@@ -1,0 +1,41 @@
+//https://www.hackerrank.com/cse310-week3-day4-seee
+//Q1
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for(int i=n;i>=0;i--){
+            int k=1;
+            for(int j=1;j<=i;j++){
+                System.out.print(k+" ");
+                k=k+1;
+            }
+            System.out.print("\n");
+        }
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int amt = sc.nextInt();
+        double iamt =(double) (amt + ((10*amt)/100));
+        if(amt>=100000){
+            double emi = (double)(iamt/12);
+            System.out.println((int)iamt);
+            System.out.printf("%.2f",emi);
+        }
+    }
+}

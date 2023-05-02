@@ -1,0 +1,65 @@
+//https://www.hackerrank.com/cse310-week4-day5-seee
+//Q1
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        double arr[][] = new double[row][];
+        
+        for(int i=0;i<row;i++){
+            int col = sc.nextInt();
+            arr[i] = new double[col];
+            for(int j=0;j<col;j++){
+                arr[i][j] = sc.nextDouble();
+            }
+        }
+        int num = sc.nextInt();
+        double sum = 0;
+        for(int i=0;i<arr[num-1].length;i++){
+            sum = sum+ arr[num-1][i];
+        }
+        double avg = sum/arr[num-1].length;
+        System.out.print("Average in Subject-"+num+" is "+ avg);
+        
+        
+        
+        
+    }
+}
+
+//Q2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        String str1[] = new String[4];
+        String str2[] = new String[4];
+        for(int i=0;i<4;i++){
+            str1[i] = sc.next();
+        }
+        for(int i=0;i<4;i++){
+            str2[i] = sc.next();
+        }
+        int cnt=0;
+        for(int i=0;i<4;i++){
+            for(int j=0;j<4;j++){
+                if(str1[i].equals(str2[j])){
+                    cnt++;
+                }
+            }
+        }
+        System.out.print(cnt);
+        
+        
+    }
+}
