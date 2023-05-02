@@ -1,0 +1,43 @@
+
+//Q1
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+         Scanner sc = new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        System.out.println((a<0 || b<0) ? "Invalid Input" : a+"-"+b);
+        
+    }
+}
+
+//Q2
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        double x,y,z;
+        Scanner input=new Scanner(System.in);
+        x=input.nextInt();
+        y=input.nextInt();
+        z=input.nextInt();
+        double sum = (double)(x+y+z);
+        double a=3;
+        double mean=(sum/a);
+        mean=mean-0.055;
+        System.out.printf("%.1f",mean);
+        
+  
+       
+    }
+}

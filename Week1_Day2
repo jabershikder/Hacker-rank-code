@@ -1,0 +1,46 @@
+
+//Q1
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        boolean prime = true;
+        for(int i=2;i<=num/2;i++){
+            if(num%i==0){
+                prime = false;
+                break;
+            }
+        }
+        System.out.println((prime)?"Prime Number": "Not Prime Number");
+        
+        
+    }
+}
+
+//Q2
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int X = sc.nextInt();
+        int Y = sc.nextInt();
+        int N = sc.nextInt();
+        
+        if(X<Y && X>0 && Y>0 && X<1000 && Y<1000 && N<1000){
+            for(int i=X;i<=Y;i++){
+                if(i%N==0){
+                    System.out.print(i+" ");
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+String regex = "\\b(\\w+)(?:\\W+\\1\\b)+";
+
+
+The "\b" pattern matches a word boundary, which can be the start or end of a word.
+The "\w+" pattern matches one or more word characters (letters, digits, or underscores).
+The "(?:\W+\1\b)+" pattern is a non-capturing group that matches one or more sequences of non-word characters (symbols or spaces) followed by the same word that was matched before (using the backreference "\1"), followed by a word boundary. The "+" sign after the group means that it should match one or more times.
